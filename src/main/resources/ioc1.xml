@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="brand" class="test.Brand">
+		<property name="brandName" ref="자바"></property>
+	</bean>
+	<bean id="brand2" class="test.Brand">
+		<property name="brandName" ref="에스프레소"></property>
+	</bean>
+	<bean id="coffee" class="test.Coffee">
+		<property name="brand" ref="brand2"></property>
+		<property name="name" value="아메리카노"></property>
+		<property name="price" ref="5000"></property>
+	</bean>
+</beans>
