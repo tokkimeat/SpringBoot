@@ -19,9 +19,8 @@ public class CustomerInfoServiceImpl implements CustomerInfoService {
 	
 	@Override
 	public CustomerInfo login(CustomerInfo customerInfo) {
-CustomerInfo tmpCui = customerInfoRepository.findByCuiIdAndCuiPwd(customerInfo.getCuiId(),customerInfo.getCuiPwd());
-log.info("tmpCui=>{}",tmpCui);
-		return null;
+
+		return customerInfoRepository.findByCuiIdAndCuiPwd(customerInfo.getCuiId(),customerInfo.getCuiPwd());
 	}
 
 }
