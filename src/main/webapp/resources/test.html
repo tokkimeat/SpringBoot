@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<input type="text" id="in1" name="input" value="test" data-col="hi">
+	<input type="text" id="in2" name="input" value="test" data-type="hi">
+	<input type="text" id="in3" name="input" value="test" data-type="hi">
+	<button onclick="check()">check</button>
+	<script>
+		function check() {
+		/*	var obj = document.querySelector('input[data-col=hi]');
+			alert(obj.id);
+			alert(obj.name);
+			alert(obj.type);
+			alert(obj.getAttribute('data-col'));*/
+
+			var objs = document.querySelectorAll('input[data-type]');
+			alert(objs.length);
+		}
+	</script>
+</body>
+</html>

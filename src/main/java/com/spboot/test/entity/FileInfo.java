@@ -18,7 +18,7 @@ import lombok.Data;
 @Table(name = "file_info")
 public class FileInfo {
 	
-	@SequenceGenerator(name = "seqFiNum",sequenceName = "seq_fii_num", allocationSize = 1)
+	@SequenceGenerator(name = "seqFiNum",sequenceName = "seq_fi_num", allocationSize = 1)
 	@GeneratedValue(generator = "seqFiNum",strategy = GenerationType.SEQUENCE)
 	@Id
 	@Column(name="fii_num")
