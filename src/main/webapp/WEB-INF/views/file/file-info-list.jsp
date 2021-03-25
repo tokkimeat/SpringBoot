@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,6 +22,9 @@
 <tbody id= "tBody">
 </tbody>
 </table>
+<c:if test="${customerInfo ne null}">
+<button onclick="location.href='/views/file/file-info-insert'">등록</button>
+</c:if>
 <script>
 
 function search(){
@@ -42,7 +46,7 @@ function search(){
 			for(var fi of res){
 				html+='<tr>';
 				html+='<td>'+fi.fiiNum+'</td>';
-				html+='<td onclick="location.href=\'/views/file-info-view?fiiNum='+fi.fiiNum+'\'">'+fi.fiiTitle+'</td>';
+				html+='<td onclick="location.href=\'/views/file/file-info-view?fiiNum='+fi.fiiNum+'\'">'+fi.fiiTitle+'</td>';
 				html+='<td><img src="/resources/'+fi.fiiFilePath+'"width="200"></td>';
 				html+='<td>'+fi.fiiContent+'</td>';
 				html+='</tr>';

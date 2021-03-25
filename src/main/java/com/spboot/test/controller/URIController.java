@@ -5,12 +5,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-public class TestController {
+public class URIController {
 
-	@GetMapping("/hello")
-	public @ResponseBody String hello() {
+	@GetMapping("/")
+	public String hello() {
 		
-		return "hello22";
+		return "views/index";
 	}
 	
 	@GetMapping("/views/**")

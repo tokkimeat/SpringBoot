@@ -1,5 +1,7 @@
 package com.spboot.test.service.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -22,5 +24,13 @@ public class CustomerInfoServiceImpl implements CustomerInfoService {
 
 		return customerInfoRepository.findByCuiIdAndCuiPwd(customerInfo.getCuiId(),customerInfo.getCuiPwd());
 	}
+
+
+	@Override
+	public CustomerInfo saveCustomerInfo(CustomerInfo Ci) {
+
+		return customerInfoRepository.save(Ci);
+	}
+	
 
 }
