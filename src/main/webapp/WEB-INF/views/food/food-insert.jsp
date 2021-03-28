@@ -29,10 +29,18 @@
 			xhr.open('POST', '/food-insert');
 			xhr.onreadystatechange = function() {
 				if (xhr.readyState == 4 && xhr.status == 200) {
-					console.log(xhr.responseText);
+					if (xhr.responseText && xhr.responseText != null) {
+						alert('등록 완료!');
+						location.href = "/views/food/food-list";
+					}
+					
+
 				}
+
 			}
-			xhr.setRequestHeader('content-type','application/json;charset=utf-8');
+
+			xhr.setRequestHeader('content-type',
+					'application/json;charset=utf-8');
 			xhr.send(JSON.stringify(param));
 		}
 		window.onload = save;
